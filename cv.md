@@ -1,7 +1,6 @@
 # Kira Beloludinova 
 
-![It is me]( )
-*****
+![Альтернативный текст](https://i.imgur.com/hcdZH1Y.png)
 ### Contacts
 - discord: Кир#7840
 - tg: @KiraBelo
