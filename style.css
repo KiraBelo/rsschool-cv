@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(247, 238, 238);
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    height: 100%;
+}
+
+.section {
+    width: 80%;
+}
+
+.container-img,
+.greeting {
+    vertical-align: text-bottom;
+    text-align: right;
+    display: inline-block;
+    color: red;
+    font-family: Lora, serif;
+    font-size: 2.7em;
+}
+
+.greeting {
+    padding-left: 2em;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0 30px;
+    transition: .3s;
+    /*border: 2px solid #3b443d;*/
+    padding: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10em;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 2em;
+    line-height: 1.2;
+    color: black;
+}
+
+.nav-list a::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.nav-list a:hover {
+    color: #3b443d;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.round {
+    display: inline;
+    margin: 0 0;
+    border-radius: 50%;
+    filter: grayscale(30%);
+}
+
+.section-item a {
+    color: #829985;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.section-item a:hover {
+    color: #4d2323;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+}
+
+.name {
+    font-size: 4em;
+    font-family: 'Lora', serif;
+}
+
+code pre {
+    word-break: break-all;
+    background-color: rgb(189, 178, 178);
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 20px;
+    color: rgb(12, 49, 49);
+    overflow: auto;
+}
+
+.section-title {
+    font-family: Lora, serif;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding-left: 0.4em;
+}
+
+.icon {
+    width: 50px;
+}
+
+.footer {}

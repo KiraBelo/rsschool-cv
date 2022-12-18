@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="assets\img\icons8-bookmark-32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>CV</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                <li class="nav-item"><a href="#summary" class="nav-link">Summary</a> </li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main .main-container">
+        <div class="container">
+            <section class="section" id="profile">
+                <div class="container container-img"><img class="round" src="assets\img\cv.png" alt="kira_belova_img"> <span class="greeting">Hello, world!</span></div>
+                <h1 class="section-title name">Kira Belova</h1>
+            </section>
+            <section class="section" id="contacts">
+                <h2 class="section-title">Contacts</h2>
+                <p>
+                    <ul>
+                        <li>tg: KiraBelo</li>
+                        <li>github: KiraBelo</li>
+                        <li>discord: KiraBelo</li>
+                        <li>Kiragoogl@gmail.com</li>
+
+                    </ul>
+                </p>
+            </section>
+            <section class="section" id="summary">
+                <h2 class="section-title">Summary</h2>
+                <p>Hi, I'm Kira. I am 33 years old and I am a js-developer. I am in love with javascript and really want to become a great programmer.</p>
+            </section>
+            <section class="section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <ul>
+                    <li>Java-script</li>
+                    <li>Node.js</li>
+                    <li>Frontend (DOM API)</li>
+                    <li>QA testing</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                </ul>
+            </section>
+            <section class="section" id="code">
+                <h2 class="section-title">Code</h2>
+                <code><pre>
+                    import readlineSync from 'readline-sync';
+
+const roundsCount = 3;
+
+const play = (description, generateRound) => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log(description);
+
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, rightAnswer] = generateRound();
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (rightAnswer !== userAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${userName}!`);
+};
+export default play;
+                </pre></code>
+            </section>
+            <section class="section" id="courses">
+                <h2 class="section-title">Courses</h2>
+                <p></p>
+            </section>
+            <section class="section" id="project">
+                <h2 class="section-title">Projects</h2>
+                <p>I created five math games as part of a <a href="https://ru.hexlet.io">Hexlet</a> training course.<br>
+                    <a href="https://github.com/KiraBelo/frontend-project-lvl1"> You can play here!</a></p>
+            </section>
+            <section class="section" id="education">
+                <h2 class="section-title">Education</h2>
+                <p> <a href="https://hexlet.io/programs/frontend"> Hexlet Fronten Developer</a> </p>
+            </section>
+            <section class="section" id="languages">
+                <h2 class="section-title">Languages</h2>
+                <ul>
+                    <li>English - B2</li>
+                    <li>Italiano - A2</li>
+                    <li>Russian - Native</li>
+
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <a href="https://github.com/KiraBelo"> <img class="icon" src="\assets\img\pngwing.com.png" alt="my_Github"> </a>
+            <a href="https://rs.school/js/"><img class="icon" src="\assets\img\rs_school_js.svg" alt="logo_rss"></a>
+            <p>2022</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
