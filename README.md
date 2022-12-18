@@ -1,2 +1,2 @@
  rsschool-cv-html
-# https://KiraBelo.github.io/rsschool-cv/
+# https://KiraBelo.github.io/rsschool-cv/cv
