@@ -20,7 +20,7 @@
 - **Git**
 - **npm, yarn**
 - **VIM/VScode**
-- LaTeX
+- **LaTeX**
 
 
 ## My code example
