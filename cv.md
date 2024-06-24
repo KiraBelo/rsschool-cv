@@ -92,5 +92,4 @@ Skills:
 ---
 - Russian C2
 - English B2
-- Osetian A2
 - Italian A1
