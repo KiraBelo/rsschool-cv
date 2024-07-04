@@ -1,1 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root {
+    --primary-color: #ff7613;
+    --text-color: gray;
+}
+html{
+    font-size: 10px;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: black;
+    color:aliceblue
+}
+/*common styles*/
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+/*layouts*/
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background-color: #181818;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
 
