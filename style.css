@@ -35,3 +35,18 @@ img {
     gap: 4rem;
 }
 
+.profile_navigation{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.profile_navigation_item{
+    list-style-type: none;
+}
+.profile-profile_Img{
+    width: 200px;
+}
+
+.profile-name {
+    font-size: 3rem;
+}
