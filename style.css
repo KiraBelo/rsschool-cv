@@ -22,6 +22,7 @@ a {
 }
 img {
     width: 100%;
+    border-radius: 50%;
 }
 /*layouts*/
 .container {
@@ -31,11 +32,36 @@ img {
     display: grid;
     padding: 5rem;
     background-color: #181818;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
 }
 
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Две колонки для основного контента */
+        gap: 4rem;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .container { 
+            width: 100%;
+            padding: 3rem;
+            gap: 7rem;
+        }
+        .main-content {
+            grid-template-columns: 1fr; /* Одна колонка для мобильных устройств */
+        }
+    }
+
+.profile{
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
 .profile_navigation{
+    grid-columns: 1 / -1;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -44,9 +70,33 @@ img {
     list-style-type: none;
 }
 .profile-profile_Img{
-    width: 200px;
+    
 }
 
 .profile-name {
     font-size: 3rem;
+}
+.profile_first-name {
+    color: white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+}
+.profile_second-name{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 1.5vw,7rem);
+    display: block;
+    text-transform: uppercase;
+}
+.profile_title{
+    font-size: 1.5rem;
+}
+.profile_description {
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
