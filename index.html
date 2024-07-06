@@ -1,46 +1,168 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kira's cv for rsscool</title>
+    <title>Kira's CV for RSSCool</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/086fe94f18.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-    <header>
-        <div class="profile">
-         <div class="profile-profile_Img"><img src="../img/hcdZH1Y.png" alt="Kira_Beloludinova"></div>
-            <div class="profile-name"> <h1><span class="profile_first-name">Kira</span> <span class="profile_second-name">Beloludinova</span></h1>
-                <p class="profile_title">FRONTEND DEVELOPER</p>
-                <p class="profile_description">Hi, I’m Kira. I am 34 years old and I am a js-developer. I am in love with javascript and really want to become a great programmer.</p>
-            </div>
-      </div>
-</header>
-
-    <div class="main-content">
-    <main>
-        <nav>
-            <ul class="profile_navigation">
-                <li class="profile_navigation_item">My skills</li>
-                <li class="profile_navigation_item">My code example</li>
-                <li class="profile_navigation_item">Experience</li>
-                <li class="profile_navigation_item">Education</li>
-                <li class="profile_navigation_item">Languages</li>
-            </ul>
-                </nav>
-<h2>My skills</h2>
-<div class="contacts">discord: KiraBelo(@KiraBelo)
-    tg: @KiraBelo
-    github: my github</div>
-    </main>
-</div>
-    <footer>
+        <header class="header">
+            <nav >
+                <ul class="profile_navigation">
+                    <li class="profile_navigation_item"><a href="#skills">My skills</a></li>
+                    <li class="profile_navigation_item"><a href="#code">My code example</a></li>
+                    <li class="profile_navigation_item"><a href="#experience">Experience</a></li>
+                    <li class="profile_navigation_item"><a href="#education">Education</a></li>
+                    <li class="profile_navigation_item"><a href="#languages">Languages</a></li>
+                    <li class="profile_navigation_item"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <div class="profile-profile_Img"><img src="../img/hcdZH1Y.png" alt="Kira_Beloludinova"></div>
+                <div class="profile-name">
+                    <h1><span class="profile_first-name">Kira</span> <span class="profile_second-name">Beloludinova</span></h1>
+                    <h3 class="profile_title">FRONTEND DEVELOPER</h3>
+                    <p class="description">Hi, I’m Kira. I am 34 years old and I am a JS-developer. I am in love with JavaScript and really want to become a great programmer.</p>
+                </div>
+            </div>    
+      
         
-    </footer>
+        </header>
+        
+        <main class="main-content">
+   
+            <section id="experience" class="section">
+                <h2 class="section_title">Experience</h2>
+                <hr>
+            <div class="experience">
+                <div class="experience_item">
+                    <h4 class="subtitle"><i class="fab fa-git-alt"></i><a href="https://github.com/KiraBelo/frontend-project-Brain-game">Brain-games</a></h4>
+                    <p class="description">5 math mini-games</p>
+                    <h5>Skills:</h5>
+                    <ul>
+                        <li>REPL</li>
+                        <li>npm, babel, eslint, makefile</li>
+                        <li>Airbnb</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+                <div class="experience_item">
+                    <h4 class="subtitle"><i class="fab fa-git-alt"></i><a href="https://github.com/KiraBelo/frontend-project-46.git">Difference calculator</a></h4>
+                    <p class="description">Utility for finding differences in configuration files. <br></p>
+                    <h5>Utility Features:</h5>
+                        <ul><li>Support for different formats</li><li>Generating a report in the form of plain text, pretty and json</li></ul>
+                    <h5>Skills:</h5>
+                    <ul>
+                        
+                        <li>Support for different formats</li>
+                        <li>Generating a report in the form of plain text, pretty and JSON</li>
+                        <li>Skills:</li>
+                        <li>commander.js</li>
+                        <li>Jest</li>
+                        <li>TDD</li>
+                        <li>npm, babel, eslint, makefile</li>
+                        <li>webpack</li>
+                    </ul>
+            </div>
+        </div>
+            </section>
+
+
+
+            <section id="code" class="section">
+                <h2 class="section_title">My code example</h2>
+                <hr>
+                <p class="quote"> Implement and export a default function that takes a list of input companies (example list in src/index.js) and uses that list to generate positions (one for each company). Clicking on getting a company description (if there is a description of another company, it is replaced). Reappearance of conclusion. The data must be completely removed, hiding with classes is not suitable. By default, no description is shown.</p>
+                <pre>
+const app = (companies) => {
+    const container = document.querySelector('div.container');
+    let activeCompanyId = null;
+    const render = (companies) => {
+        container.textContent = '';
+        companies.forEach((company) => {
+            const button = document.createElement('button');
+            button.className = 'btn btn-primary';
+            button.textContent = company.name;
+            const description = document.createElement('div');
+            description.textContent = company.description;
+            description.className = 'description';
+            description.dataset.companyId = company.id;
+            button.addEventListener('click', () => {
+                if (activeCompanyId === company.id) {
+                    activeCompanyId = null;
+                    description.remove();
+                } else {
+                    activeCompanyId = company.id;
+                    container.querySelectorAll('.description').forEach((el) => el.remove());
+                    container.appendChild(description);
+                }
+            });
+            container.appendChild(button);
+        });
+    };
+    render(companies);
+};
+export default app
+                </pre>
+            </section>
+
+
+
+            <section id="skills" class="section">
+               
+                <h2 class="section_title">My skills</h2>
+                 <hr>
+                <ul class="skills_list">
+                    <li><i class="fab fa-js-square"></i> JavaScript/ES5/S6</li>
+                    <li><i class="fab fa-node-js"></i> Node.js</li>
+                    <li><i class="fab fa-html5"></i> HTML/CSS3</li>
+                    <li><i class="fab fa-git-alt"></i> Git</li>
+                    <li><i class="fab fa-npm"></i> npm, yarn</li>
+                    <li><i class="fas fa-code"></i> VIM/VScode</li>
+                    <li><i class="fas fa-database"></i> HTTP/HTTPS</li>
+                    <li><i class="fas fa-code-branch"></i> LaTeX</li>
+                </ul>
+            </section>     
+
+                               <section id="education" class="section">
+                <h2 class="section_title">Education</h2>
+                <hr>
+                <p class="description">My career started with a background in history and medicine education, which has given me a unique ability to see the big picture in seeming chaos. I am also a professional tailor, which inspires me to create elegant and efficient code.</p>
+            </section>
+
+            <section id="languages" class="section">
+                <h2 class="section_title">Languages</h2>
+                <hr>
+                <ul class="languages_list">
+                    <li class="languages_item">Russian C2 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></li>
+                    <li class="languages_item">English B2<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></li>
+                    <li class="languages_item">Italian A1<i class="fas fa-star"></i></li>
+                </ul>
+            </section>
+
+            <section id="contacts" class="section">
+
+                <h2 class="section_title">Contacts</h2>
+                <hr>
+                <ul>
+                    <li><i class="fab fa-discord"></i> <a href="https://t.me/kirbelo">KiraBelo(@KiraBelo)</a></li>
+                    <li><i class="fab fa-telegram-plane"></i> <a href="https://t.me/kirbelo"> @KiraBelo</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/KiraBelo">KiraBelo</a> </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="footer_git"><i class="fab fa-github"></i> <a href="https://github.com/KiraBelo">KiraBelo</a></div>
+                <div class="footer_year"><span>2024</span></div>
+                <div class="footer_rss"> <a href="https://rs.school/courses/javascript-ru"><img class="rss-logo" src="./img/rs-school-logo.svg" alt="rss-logo" ></a></div>
+            </div>
+        </footer>
+    </div>
 </body>
-</div>
 </html>
